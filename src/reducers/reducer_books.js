@@ -1,10 +1,12 @@
-'use strict';
+import {BOOK_SELECTED} from '../constants/ActionTypes';
 
-export default function() {
-    return [
-        {title: 'JavaScript Learn'},
-        {title: 'Harry Potter'},
-        {title: 'The Dark Tower'},
-        {title: 'Eloquent Ruby'}
-    ]
+export function reducerBooks(state = {}, action) {
+    switch (action.type) {
+        case BOOK_SELECTED:
+            return action.book;
+
+        default:
+            return state;
+    }
+
 }
