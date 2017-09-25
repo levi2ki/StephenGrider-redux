@@ -9,15 +9,15 @@ import reducers from './reducers';
 
 const initialState = {
     books: [
-        {title: 'JavaScript Learn'},
-        {title: 'Harry Potter'},
-        {title: 'The Dark Tower'},
-        {title: 'Eloquent Ruby'}
+        {title: 'JavaScript Learn', pages: 101},
+        {title: 'Harry Potter', pages: 222},
+        {title: 'The Dark Tower', pages: 144},
+        {title: 'Eloquent Ruby', pages: 10}
     ],
     bookSelected: null
 };
 const store = createStore(reducers,initialState);
-store.subscribe(()=> console.log(store.getState()));
+// store.subscribe(()=> console.log(store.getState()));
 // const createStoreWithMiddleware = applyMiddleware()(createStore);
 //<Provider store={createStoreWithMiddleware(reducers)}>
 ReactDOM.render(

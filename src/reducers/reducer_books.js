@@ -1,12 +1,1 @@
-import {BOOK_SELECTED} from '../constants/ActionTypes';
-
-export function reducerBooks(state = {}, action) {
-    switch (action.type) {
-        case BOOK_SELECTED:
-            return action.book;
-
-        default:
-            return state;
-    }
-
-}
+export const reducerBooksList = (state = []) => state;
